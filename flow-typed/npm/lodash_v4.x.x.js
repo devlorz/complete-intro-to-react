@@ -16,15 +16,13 @@ declare module "lodash" {
   ) => CurriedFunction2<BB, CC, R>) &
     ((...r: [AA, BB]) => CurriedFunction1<CC, R>) &
     ((...r: [AA, BB, CC]) => R);
-  declare type CurriedFunction3<A, B, C, R> = __CurriedFunction3<
-    A,
+  declare type CurriedFunction3<A, B, C, R> = __CurriedFunction3<A,
     B,
     C,
     R,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type __CurriedFunction4<
     A,
@@ -40,8 +38,7 @@ declare module "lodash" {
     ((...r: [AA, BB]) => CurriedFunction2<CC, DD, R>) &
     ((...r: [AA, BB, CC]) => CurriedFunction1<DD, R>) &
     ((...r: [AA, BB, CC, DD]) => R);
-  declare type CurriedFunction4<A, B, C, D, R> = __CurriedFunction4<
-    A,
+  declare type CurriedFunction4<A, B, C, D, R> = __CurriedFunction4<A,
     B,
     C,
     D,
@@ -49,8 +46,7 @@ declare module "lodash" {
     *,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type __CurriedFunction5<
     A,
@@ -69,8 +65,7 @@ declare module "lodash" {
     ((...r: [AA, BB, CC]) => CurriedFunction2<DD, EE, R>) &
     ((...r: [AA, BB, CC, DD]) => CurriedFunction1<EE, R>) &
     ((...r: [AA, BB, CC, DD, EE]) => R);
-  declare type CurriedFunction5<A, B, C, D, E, R> = __CurriedFunction5<
-    A,
+  declare type CurriedFunction5<A, B, C, D, E, R> = __CurriedFunction5<A,
     B,
     C,
     D,
@@ -80,8 +75,7 @@ declare module "lodash" {
     *,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type __CurriedFunction6<
     A,
@@ -103,8 +97,7 @@ declare module "lodash" {
     ((...r: [AA, BB, CC, DD]) => CurriedFunction2<EE, FF, R>) &
     ((...r: [AA, BB, CC, DD, EE]) => CurriedFunction1<FF, R>) &
     ((...r: [AA, BB, CC, DD, EE, FF]) => R);
-  declare type CurriedFunction6<A, B, C, D, E, F, R> = __CurriedFunction6<
-    A,
+  declare type CurriedFunction6<A, B, C, D, E, F, R> = __CurriedFunction6<A,
     B,
     C,
     D,
@@ -116,8 +109,7 @@ declare module "lodash" {
     *,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type Curry = (<A, R>((...r: [A]) => R) => CurriedFunction1<A, R>) &
     (<A, B, R>((...r: [A, B]) => R) => CurriedFunction2<A, B, R>) &
@@ -322,7 +314,7 @@ declare module "lodash" {
     indexOf<T>(array: ?Array<T>, value: T, fromIndex?: number): number;
     initial<T>(array: ?Array<T>): Array<T>;
     intersection<T>(...arrays: Array<Array<T>>): Array<T>;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     intersectionBy<T>(a1: Array<T>, iteratee?: ValueOnlyIteratee<T>): Array<T>;
     intersectionBy<T>(
       a1: Array<T>,
@@ -342,7 +334,7 @@ declare module "lodash" {
       a4: Array<T>,
       iteratee?: ValueOnlyIteratee<T>
     ): Array<T>;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     intersectionWith<T>(a1: Array<T>, comparator: Comparator<T>): Array<T>;
     intersectionWith<T>(
       a1: Array<T>,
@@ -401,7 +393,7 @@ declare module "lodash" {
     takeRightWhile<T>(array: ?Array<T>, predicate?: Predicate<T>): Array<T>;
     takeWhile<T>(array: ?Array<T>, predicate?: Predicate<T>): Array<T>;
     union<T>(...arrays?: Array<Array<T>>): Array<T>;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     unionBy<T>(a1: Array<T>, iteratee?: ValueOnlyIteratee<T>): Array<T>;
     unionBy<T>(
       a1: Array<T>,
@@ -421,7 +413,7 @@ declare module "lodash" {
       a4: Array<T>,
       iteratee?: ValueOnlyIteratee<T>
     ): Array<T>;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     unionWith<T>(a1: Array<T>, comparator?: Comparator<T>): Array<T>;
     unionWith<T>(
       a1: Array<T>,
@@ -448,7 +440,7 @@ declare module "lodash" {
     unzipWith<T>(array: ?Array<T>, iteratee?: Iteratee<T>): Array<T>;
     without<T>(array: ?Array<T>, ...values?: Array<T>): Array<T>;
     xor<T>(...array: Array<Array<T>>): Array<T>;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     xorBy<T>(a1: Array<T>, iteratee?: ValueOnlyIteratee<T>): Array<T>;
     xorBy<T>(
       a1: Array<T>,
@@ -468,7 +460,7 @@ declare module "lodash" {
       a4: Array<T>,
       iteratee?: ValueOnlyIteratee<T>
     ): Array<T>;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     xorWith<T>(a1: Array<T>, comparator?: Comparator<T>): Array<T>;
     xorWith<T>(
       a1: Array<T>,
@@ -501,7 +493,7 @@ declare module "lodash" {
 
     zipObject<K, V>(props?: Array<K>, values?: Array<V>): { [key: K]: V };
     zipObjectDeep(props?: any[], values?: any): Object;
-    //Workaround until (...parameter: T, parameter2: U) works
+    // Workaround until (...parameter: T, parameter2: U) works
     zipWith<T>(a1: NestedArray<T>, iteratee?: Iteratee<T>): Array<T>;
     zipWith<T>(
       a1: NestedArray<T>,
@@ -1272,15 +1264,13 @@ declare module "lodash/fp" {
   ) => CurriedFunction2<BB, CC, R>) &
     ((...r: [AA, BB]) => CurriedFunction1<CC, R>) &
     ((...r: [AA, BB, CC]) => R);
-  declare type CurriedFunction3<A, B, C, R> = __CurriedFunction3<
-    A,
+  declare type CurriedFunction3<A, B, C, R> = __CurriedFunction3<A,
     B,
     C,
     R,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type __CurriedFunction4<
     A,
@@ -1296,8 +1286,7 @@ declare module "lodash/fp" {
     ((...r: [AA, BB]) => CurriedFunction2<CC, DD, R>) &
     ((...r: [AA, BB, CC]) => CurriedFunction1<DD, R>) &
     ((...r: [AA, BB, CC, DD]) => R);
-  declare type CurriedFunction4<A, B, C, D, R> = __CurriedFunction4<
-    A,
+  declare type CurriedFunction4<A, B, C, D, R> = __CurriedFunction4<A,
     B,
     C,
     D,
@@ -1305,8 +1294,7 @@ declare module "lodash/fp" {
     *,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type __CurriedFunction5<
     A,
@@ -1325,8 +1313,7 @@ declare module "lodash/fp" {
     ((...r: [AA, BB, CC]) => CurriedFunction2<DD, EE, R>) &
     ((...r: [AA, BB, CC, DD]) => CurriedFunction1<EE, R>) &
     ((...r: [AA, BB, CC, DD, EE]) => R);
-  declare type CurriedFunction5<A, B, C, D, E, R> = __CurriedFunction5<
-    A,
+  declare type CurriedFunction5<A, B, C, D, E, R> = __CurriedFunction5<A,
     B,
     C,
     D,
@@ -1336,8 +1323,7 @@ declare module "lodash/fp" {
     *,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type __CurriedFunction6<
     A,
@@ -1359,8 +1345,7 @@ declare module "lodash/fp" {
     ((...r: [AA, BB, CC, DD]) => CurriedFunction2<EE, FF, R>) &
     ((...r: [AA, BB, CC, DD, EE]) => CurriedFunction1<FF, R>) &
     ((...r: [AA, BB, CC, DD, EE, FF]) => R);
-  declare type CurriedFunction6<A, B, C, D, E, F, R> = __CurriedFunction6<
-    A,
+  declare type CurriedFunction6<A, B, C, D, E, F, R> = __CurriedFunction6<A,
     B,
     C,
     D,
@@ -1372,8 +1357,7 @@ declare module "lodash/fp" {
     *,
     *,
     *,
-    *
-  >;
+    *>;
 
   declare type Curry = (<A, R>((...r: [A]) => R) => CurriedFunction1<A, R>) &
     (<A, B, R>((...r: [A, B]) => R) => CurriedFunction2<A, B, R>) &
@@ -3288,17 +3272,13 @@ declare module "lodash/sortedLastIndex" {
 }
 
 declare module "lodash/sortedLastIndexBy" {
-  declare module.exports: $PropertyType<
-    $Exports<"lodash">,
-    "sortedLastIndexBy"
-  >;
+  declare module.exports: $PropertyType<$Exports<"lodash">,
+    "sortedLastIndexBy">;
 }
 
 declare module "lodash/sortedLastIndexOf" {
-  declare module.exports: $PropertyType<
-    $Exports<"lodash">,
-    "sortedLastIndexOf"
-  >;
+  declare module.exports: $PropertyType<$Exports<"lodash">,
+    "sortedLastIndexOf">;
 }
 
 declare module "lodash/sortedUniq" {
@@ -3654,10 +3634,8 @@ declare module "lodash/isArrayLike" {
 }
 
 declare module "lodash/isArrayLikeObject" {
-  declare module.exports: $PropertyType<
-    $Exports<"lodash">,
-    "isArrayLikeObject"
-  >;
+  declare module.exports: $PropertyType<$Exports<"lodash">,
+    "isArrayLikeObject">;
 }
 
 declare module "lodash/isBoolean" {

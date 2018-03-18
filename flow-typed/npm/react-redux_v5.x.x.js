@@ -48,9 +48,7 @@ declare module "react-redux" {
     state: void
   }
 
-  declare type ConnectedComponentClass<OP, P, Def, St> = Class<
-    ConnectedComponent<OP, P, Def, St>
-  >;
+  declare type ConnectedComponentClass<OP, P, Def, St> = Class<ConnectedComponent<OP, P, Def, St>>;
 
   declare type Connector<OP, P> = {
     (

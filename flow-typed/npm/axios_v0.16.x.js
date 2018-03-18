@@ -41,8 +41,7 @@ declare module "axios" {
     paramsSerializer?: (params: Object) => string;
     progress?: (progressEvent: Event) => void | mixed;
     proxy?: ProxyConfig | false;
-    responseType?:
-      | "arraybuffer"
+    responseType?: | "arraybuffer"
       | "blob"
       | "document"
       | "json"
